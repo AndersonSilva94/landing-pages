@@ -2,13 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Styled from './styles';
 
-function Heading({ children, light = false }) {
-  return <Styled.Title light={light}>{children}</Styled.Title>;
+function Heading({
+  children,
+  colorDark = true,
+  as = 'h1',
+  size = 'big',
+  uppercase = false,
+}) {
+  return (
+    <Styled.Title
+      colorDark={colorDark}
+      as={as}
+      size={size}
+      uppercase={uppercase}
+    >
+      {children}
+    </Styled.Title>
+  );
 }
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  light: PropTypes.bool.isRequired,
+  colorDark: PropTypes.bool.isRequired,
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']).isRequired,
+  uppercase: PropTypes.bool.isRequired,
 };
 
 export default Heading;
