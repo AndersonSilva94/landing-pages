@@ -23,10 +23,10 @@ function Heading({
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  colorDark: PropTypes.bool.isRequired,
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']).isRequired,
-  uppercase: PropTypes.bool.isRequired,
+  colorDark: PropTypes.bool,
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']),
+  uppercase: PropTypes.bool,
 };
 
 export default Heading;
