@@ -23,9 +23,7 @@ describe('<Heading />', () => {
     const { getByRole } = renderTheme(
       <Heading colorDark={false}>teste</Heading>,
     );
-    // debug();
 
-    // verificar o valor de sua children, se ela existe
     const headingTest = getByRole('heading', { name: 'teste' });
 
     // verificar os estilos
@@ -38,9 +36,7 @@ describe('<Heading />', () => {
     const { rerender, getByRole } = renderTheme(
       <Heading size="small">teste</Heading>,
     );
-    // debug();
 
-    // verificar o valor de sua children, se ela existe
     const headingTest = getByRole('heading', { name: 'teste' });
 
     // verificar os estilos
@@ -83,7 +79,6 @@ describe('<Heading />', () => {
     const { rerender, getByRole } = renderTheme(
       <Heading size="huge">teste</Heading>,
     );
-    // debug();
 
     const headingTest = getByRole('heading', { name: 'teste' });
 
@@ -98,9 +93,7 @@ describe('<Heading />', () => {
 
   it('should render with default values', () => {
     const { getByRole } = renderTheme(<Heading uppercase>teste</Heading>);
-    // debug();
 
-    // verificar o valor de sua children, se ela existe
     const headingTest = getByRole('heading', { name: 'teste' });
 
     // verificar os estilos
@@ -115,14 +108,11 @@ describe('<Heading />', () => {
     const { getByRole, container } = renderTheme(
       <Heading as="h6">teste</Heading>,
     );
-    // debug();
 
-    // verificar o valor de sua children, se ela existe
     const headingTest = getByRole('heading', { name: 'teste' });
 
     const h6 = container.querySelector('h6');
 
-    // verificar os estilos
     expect(h6.tagName.toLowerCase()).toBe('h6');
   });
 });
