@@ -19,7 +19,7 @@ NavLinks.propTypes = {
       link: PropTypes.string.isRequired,
       newTab: PropTypes.bool,
     }),
-  ).isRequired,
+  ),
 };
 
 export default NavLinks;
