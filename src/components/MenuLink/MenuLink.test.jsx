@@ -26,12 +26,11 @@ describe('<MenuLink />', () => {
     expect(linkTest).toHaveAttribute('target', '_blank');
   });
   it('should match snapshot', () => {
-    const { getByRole } = renderTheme(
+    const { container } = renderTheme(
       <MenuLink link="http://www.google.com" newTab={true}>
         Children
       </MenuLink>,
     );
-    const linkTest = getByRole('link', { name: /children/i });
-    expect(linkTest).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
