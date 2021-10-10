@@ -12,8 +12,16 @@ function Menu({ links = [], logoData }) {
 
   return (
     <>
-      <Styled.Button visible={menuVisible} onClick={() => setMenuVisible(true)}>
-        {menuVisible ? <CloseIcon /> : <MenuIcon />}
+      <Styled.Button
+        visible={menuVisible}
+        onClick={() => setMenuVisible(true)}
+        aria-label="Open/Close menu"
+      >
+        {menuVisible ? (
+          <CloseIcon aria-label="Close menu" />
+        ) : (
+          <MenuIcon aria-label="Open menu" />
+        )}
       </Styled.Button>
       <Styled.Container
         visible={menuVisible}
