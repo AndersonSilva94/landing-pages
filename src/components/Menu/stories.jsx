@@ -12,9 +12,6 @@ export default {
       srcImg: '',
     },
   },
-  argTypes: {
-    children: { type: 'string' },
-  },
 };
 
 export const Template = (args) => {
