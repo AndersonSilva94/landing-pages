@@ -4,18 +4,20 @@ import SectionBackground from '../SectionBackground';
 import Heading from '../Heading';
 import TextComponent from '../TextComponent';
 
-function GridSection({ title, description, grid }) {
+function GridSection({ title, description, grid, background = false }) {
   return (
-    <SectionBackground>
+    <SectionBackground background={background}>
       <Styled.Container>
-        <Heading size="huge" uppercase>
+        <Heading size="huge" uppercase colorDark={!background}>
           {title}
         </Heading>
         <TextComponent>{description}</TextComponent>
         <Styled.Grid>
           {grid.map((elem) => (
             <Styled.GridElement key={elem.title}>
-              <Heading size="medium">{elem.title}</Heading>
+              <Heading size="medium" colorDark={!background}>
+                {elem.title}
+              </Heading>
               <TextComponent>{elem.description}</TextComponent>
             </Styled.GridElement>
           ))}
@@ -34,6 +36,7 @@ GridSection.propTypes = {
       description: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  background: PropTypes.bool,
 };
 
 export default GridSection;
