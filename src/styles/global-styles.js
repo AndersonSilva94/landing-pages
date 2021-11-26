@@ -15,8 +15,13 @@ html {
 }
 
 body {
+  padding: 0;
   font-size: 1.6rem;
   font-family: 'Open Sans', sans-serif;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
